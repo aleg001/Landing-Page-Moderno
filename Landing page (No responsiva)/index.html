@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="src/hover.js"></script>
     <title>Landing Page Moderna</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,5 +27,41 @@
     </div>
     <div class="cursor"></div>
     <div class="img"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+      integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      var myAnimation = new hoverEffect({
+        parent: document.querySelector(".img"),
+        intensity: 0.4,
+        image1: "../elementos/abstracto_azul.jpeg",
+        image2: "../elementos/abstracto_morado.jpeg",
+        displacementImage: "../elementos/abstracto_verde.jpeg",
+      });
+      let title = document.querySelector(".container");
+      let img = document.querySelector(".img");
+      let cursorCircle = document.querySelector(".cursor");
+
+      let cursor = {
+        x: 0,
+        y: 0,
+      };
+      document.addEventListener("mousemove", (e) => {
+        cursor.x = e.clientX * 0.03;
+        cursor.y = e.clientY * 0.03;
+        img.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        cursorCircle.style.transform = `translate(${e.clientX}px,${e.clientY})`;
+      });
+    </script>
   </body>
 </html>
