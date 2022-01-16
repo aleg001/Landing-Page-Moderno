@@ -1,28 +1,27 @@
+// Margenes y width
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #e1faff;
-  display: -ms-grid;
   display: grid;
   place-content: center;
   height: 100vh;
   margin: 0;
   overflow: hidden;
-}
 
-body:before {
-  content: "";
-  position: absolute;
-  left: 35%;
-  border-left: 1px solid black;
-  height: 100vh;
-  top: 0;
-  opacity: 20%;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 35%;
+    border-left: 1px solid rgba($color: #000000, $alpha: 1);
+    height: 100vh;
+    top: 0;
+    opacity: 20%;
+  }
 }
 
 .container {
@@ -37,28 +36,26 @@ body:before {
   position: relative;
   top: -20%;
   left: 30%;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 3.5px;
+    background: black;
+    left: -23%;
+    top: 100%;
+  }
+  .title2,
+  .title3 {
+    position: relative;
+    z-index: 2;
+  }
 }
-
-.title:before {
-  content: "";
-  position: absolute;
-  width: 25%;
-  height: 3.5px;
-  background: black;
-  left: -23%;
-  top: 100%;
-}
-
-.title .title2,
-.title .title3 {
-  position: relative;
-  z-index: 2;
-}
-
 p {
   font-family: "Playfair Display SC", serif;
   font-size: 1.5rem;
   margin-top: 2em;
+
   position: fixed;
   left: 38%;
   top: 70%;
@@ -82,6 +79,8 @@ p {
   top: 23%;
   left: 54%;
   z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  //background: cyan;
 }
 
 .cursor {
@@ -90,7 +89,17 @@ p {
   height: 3em;
   border-radius: 50%;
   border: 1px solid green;
-  margin-left: -1.5em;
-  margin-top: -1.5em;
+  margin-left: -1.3em;
+  margin-top: -1.3em;
 }
-/*# sourceMappingURL=main.css.map */
+
+.letter {
+  display: inline-block;
+  line-height: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transform: translateY(-50px);
+}
+
+.img:hover {
+  opacity: 50%;
+}

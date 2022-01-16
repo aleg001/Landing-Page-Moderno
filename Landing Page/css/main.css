@@ -1,0 +1,111 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e1faff;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  left: 35%;
+  border-left: 1px solid black;
+  height: 100vh;
+  top: 0;
+  opacity: 20%;
+}
+
+.container {
+  margin-left: -10%;
+}
+
+.title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 8rem;
+  line-height: 10rem;
+  pointer-events: none;
+  position: relative;
+  top: -20%;
+  left: 30%;
+}
+
+.title:before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3.5px;
+  background: black;
+  left: -23%;
+  top: 100%;
+}
+
+.title .title2,
+.title .title3 {
+  position: relative;
+  z-index: 2;
+}
+
+p {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.5rem;
+  margin-top: 2em;
+  position: fixed;
+  left: 38%;
+  top: 70%;
+}
+
+.azules {
+  position: absolute;
+  width: 30%;
+  height: 100vh;
+  z-index: -1;
+  background: white url("../elementos/foto_azul.jpeg");
+  background-size: cover;
+  right: 0;
+  opacity: 0.55;
+}
+
+.img {
+  position: absolute;
+  width: 8em;
+  height: 17em;
+  top: 23%;
+  left: 54%;
+  z-index: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.cursor {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1px solid green;
+  margin-left: -1.3em;
+  margin-top: -1.3em;
+}
+
+.letter {
+  display: inline-block;
+  line-height: 1em;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.img:hover {
+  opacity: 50%;
+}
+/*# sourceMappingURL=main.css.map */
