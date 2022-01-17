@@ -7,6 +7,7 @@ Este mini ejercicio se hizo con la finalidad de replicar un diseño hecho en Fig
 Es posible que, dentro de GitHub Pages no se pueda visualizar el efecto de distorsión realizado con las imágenes. Sin embargo, se comparte también un enlace para ver la página web en funcionamiento.
 
 Vídeo: [Enlace a Youtube](https://youtu.be/Y3zrB8uxbSY)
+
 Visualización en GitHub (Sin efecto de distorsión): [Link](https://aleg001.github.io/Landing-Page-Moderno/)
 
 ## Creditos
